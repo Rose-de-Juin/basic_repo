@@ -1,0 +1,100 @@
+Last login: Sat Aug 27 18:42:22 on ttys000
+ChristophersAir:~ Umbrella$ cd desktop/coding
+ChristophersAir:coding Umbrella$ mkdir basic_repo
+ChristophersAir:coding Umbrella$ cd basic_repo
+ChristophersAir:basic_repo Umbrella$ git init
+Initialized empty Git repository in /Users/Umbrella/Desktop/coding/basic_repo/.git/
+ChristophersAir:basic_repo Umbrella$ ls
+1. E1.html			3. HTML Form Example.html
+2. E2.html
+ChristophersAir:basic_repo Umbrella$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+Did you mean this?
+	add
+ChristophersAir:basic_repo Umbrella$ git add .
+ChristophersAir:basic_repo Umbrella$ git commit -m "first commit"
+[master (root-commit) 57ded42] first commit
+ 3 files changed, 72 insertions(+)
+ create mode 100644 1. E1.html
+ create mode 100644 2. E2.html
+ create mode 100644 3. HTML Form Example.html
+ChristophersAir:basic_repo Umbrella$ git remote add origin https://github.com/Rose-de-Juin/basic_repo.git
+ChristophersAir:basic_repo Umbrella$ git push -u origin master
+Username for 'https://github.com': Rose-de-Juin
+Password for 'https://Rose-de-Juin@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.09 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/Rose-de-Juin/basic_repo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+ChristophersAir:basic_repo Umbrella$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+ChristophersAir:basic_repo Umbrella$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   3. HTML Form Example.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ChristophersAir:basic_repo Umbrella$ git add 3. HTML Form Example.html
+fatal: pathspec '3.' did not match any files
+ChristophersAir:basic_repo Umbrella$ git add <3. HTML Form Example.html>
+-bash: syntax error near unexpected token `newline'
+ChristophersAir:basic_repo Umbrella$ git add <3.HTML Form Example.html>
+-bash: syntax error near unexpected token `newline'
+ChristophersAir:basic_repo Umbrella$ ls
+1. E1.html			3. HTML Form Example.html
+2. E2.html
+ChristophersAir:basic_repo Umbrella$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   3. HTML Form Example.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ChristophersAir:basic_repo Umbrella$ git add <3. HTML Form Example.html>...
+-bash: 3.: No such file or directory
+ChristophersAir:basic_repo Umbrella$ git add 3.\ HTML\ Form\ Example.html 
+ChristophersAir:basic_repo Umbrella$ git push -u origin master
+Username for 'https://github.com': Rose-de-Juin
+Password for 'https://Rose-de-Juin@github.com': 
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
+ChristophersAir:basic_repo Umbrella$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   3. HTML Form Example.html
+
+ChristophersAir:basic_repo Umbrella$ git add 3.\ HTML\ Form\ Example.html 
+ChristophersAir:basic_repo Umbrella$ git commit -m "update"
+[master 1991486] update
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ChristophersAir:basic_repo Umbrella$ git push -u origin master
+Username for 'https://github.com': Rose-de-Juin
+Password for 'https://Rose-de-Juin@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Rose-de-Juin/basic_repo.git
+   57ded42..1991486  master -> master
+Branch master set up to track remote branch master from origin.
+ChristophersAir:basic_repo Umbrella$ touch steps.txt
+ChristophersAir:basic_repo Umbrella$ 
